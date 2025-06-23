@@ -22,9 +22,9 @@ The escalation process will not apply for these rewards and there will be no dis
 Example: If a finding has 5 duplicates.
 Using regular each of the duplicates would get $2000 each
 With the current incentive of 20%. The earliest valid submission gets $2307.72, and the rest of the duplicates get $1923.07 each.
-Scoring described in the competition scoring page.
+Scoring described in the competition scoring page: https://docs.cantina.xyz/cantina-docs/cantina-competitions/judging-process/scoring
 
-Findings Severities described in detail on our docs page.
+Findings Severities described in detail on our docs page: https://docs.cantina.xyz/cantina-docs/cantina-competitions/judging-process/finding-severity-criteria
 
 Scope
 Repository:
