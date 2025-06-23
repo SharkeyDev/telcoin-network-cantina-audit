@@ -1,0 +1,26 @@
+[package]
+name = "state-sync"
+version.workspace = true
+edition = "2021"
+license.workspace = true
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+]
+publish = false
+
+[dependencies]
+futures.workspace = true
+eyre = { workspace = true }
+tokio = { workspace = true, features = ["sync"] }
+tracing.workspace = true
+tn-storage = { workspace = true }
+
+tn-types = { workspace = true }
+tn-config = { workspace = true }
+tn-network-libp2p = { workspace = true }
+
+consensus-metrics.workspace = true
+tn-primary = { workspace = true }
+
+[dev-dependencies]

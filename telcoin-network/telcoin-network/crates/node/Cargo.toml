@@ -1,0 +1,43 @@
+[package]
+name = "tn-node"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+    "Mysten Labs <build@mystenlabs.com>",
+]
+
+[dependencies]
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-stream = { workspace = true }
+tracing = { workspace = true }
+tn-executor = { workspace = true }
+tn-primary = { workspace = true }
+prometheus = { workspace = true }
+tn-storage = { workspace = true }
+tn-types = { workspace = true }
+tn-config = { workspace = true }
+tn-worker = { workspace = true }
+tn-rpc = { workspace = true }
+eyre = { workspace = true }
+tn-network-libp2p = { workspace = true }
+tn-reth = { workspace = true }
+consensus-metrics = { workspace = true }
+tn-primary-metrics = { workspace = true }
+state-sync = { workspace = true }
+tn-engine = { workspace = true }
+tn-batch-builder = { workspace = true }
+tn-batch-validator = { workspace = true }
+jsonrpsee = { workspace = true }
+
+# TODO: temporary solution until reth supports public rpc hooks
+tn-faucet = { workspace = true }
+
+[dev-dependencies]
+tn-primary = { workspace = true }

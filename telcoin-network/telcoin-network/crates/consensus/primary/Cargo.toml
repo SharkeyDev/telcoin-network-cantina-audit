@@ -1,0 +1,58 @@
+[package]
+name = "tn-primary"
+version.workspace = true
+license = "Apache-2.0"
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+    "Mysten Labs <build@mystenlabs.com>",
+]
+publish = false
+edition = "2021"
+
+[dependencies]
+eyre = { workspace = true }
+backoff = { workspace = true }
+cfg-if = { workspace = true }
+futures = { workspace = true }
+parking_lot = { workspace = true }
+rand = { workspace = true, features = ["small_rng"] }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = [
+    "sync",
+    "rt",
+    "macros",
+    "time",
+    "test-util",
+] }
+tracing = { workspace = true }
+tn-network-types = { workspace = true }
+tn-types = { workspace = true }
+tn-config = { workspace = true }
+tn-storage = { workspace = true }
+consensus-metrics = { workspace = true }
+tn-primary-metrics = { workspace = true }
+tn-network-libp2p = { workspace = true }
+roaring = { workspace = true }
+serde = { workspace = true }
+async-trait = { workspace = true }
+
+# test-utils
+tn-reth = { workspace = true, features = ["test-utils"], optional = true }
+indexmap = { workspace = true, optional = true }
+tempfile = { workspace = true, optional = true }
+
+[dev-dependencies]
+async-trait = { workspace = true }
+futures = { workspace = true }
+proptest = { workspace = true }
+tracing = { workspace = true }
+tn-storage = { workspace = true }
+assert_matches = { workspace = true }
+tn-types = { workspace = true, features = ["test-utils"] }
+tn-primary = { workspace = true, features = ["test-utils"] }
+tn-test-utils = { workspace = true }
+
+[features]
+default = []
+test-utils = ["tn-reth", "indexmap", "tempfile"]

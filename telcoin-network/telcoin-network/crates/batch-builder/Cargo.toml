@@ -1,0 +1,38 @@
+[package]
+name = "tn-batch-builder"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+]
+
+[dependencies]
+tn-types = { workspace = true }
+tn-reth = { workspace = true }
+futures-util = { workspace = true }
+tokio = { workspace = true, features = ["sync", "time"] }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+# unit tests
+assert_matches = { workspace = true }
+tempfile = { workspace = true }
+tn-reth = { workspace = true, features = ["test-utils"] }
+
+# integration tests
+tn-worker = { workspace = true, features = ["test-utils"] }
+tn-network-types = { workspace = true }
+tn-storage = { workspace = true }
+tn-batch-validator = { workspace = true }
+tn-engine = { workspace = true }
+tn-batch-builder = { workspace = true, features = ["test-utils"] }
+
+[features]
+default = []
+test-utils = []

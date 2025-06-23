@@ -1,0 +1,23 @@
+[package]
+name = "tn-test-utils"
+version.workspace = true
+edition = "2021"
+license = "Apache-2.0"
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+    "Mysten Labs <build@mystenlabs.com>",
+]
+publish = false
+
+[dependencies]
+tempfile = { workspace = true }
+eyre = { workspace = true }
+clap = { workspace = true, features = ["env"] }
+rand = { workspace = true }
+tn-node = { workspace = true }
+tn-reth = { workspace = true, features = ["test-utils"] }
+tn-types = { workspace = true }
+tn-faucet = { workspace = true }
+tn-config = { workspace = true }
+telcoin-network = { path = "../../bin/telcoin-network" }

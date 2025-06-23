@@ -1,0 +1,41 @@
+[package]
+name = "tn-worker"
+version.workspace = true
+license = "Apache-2.0"
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+    "Mysten Labs <build@mystenlabs.com>",
+]
+edition = "2021"
+publish = false
+
+[dependencies]
+async-trait = { workspace = true }
+futures = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["sync", "rt", "macros"] }
+tracing = { workspace = true }
+
+tn-storage = { workspace = true }
+tn-network-types = { workspace = true }
+tn-types = { workspace = true }
+tn-config = { workspace = true }
+prometheus = { workspace = true }
+
+eyre = { workspace = true }
+tn-network-libp2p = { workspace = true }
+serde = { workspace = true }
+consensus-metrics = { workspace = true }
+
+[dev-dependencies]
+tn-batch-validator = { workspace = true, features = ["test-utils"] }
+rand = { workspace = true }
+tempfile = { workspace = true }
+tn-reth = { workspace = true, features = ["test-utils"] }
+tn-test-utils = { workspace = true }
+tn-worker = { workspace = true, features = ["test-utils"] }
+
+[features]
+default = []
+test-utils = []

@@ -1,0 +1,27 @@
+[package]
+name = "tn-batch-validator"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+]
+
+[dependencies]
+tn-types = { workspace = true }
+tn-reth = { workspace = true }
+rayon = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+assert_matches = { workspace = true }
+tn-reth = { workspace = true, features = ["test-utils"] }
+tokio = { workspace = true, features = ["sync", "time"] }
+
+[features]
+default = []
+test-utils = []

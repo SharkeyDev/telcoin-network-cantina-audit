@@ -1,0 +1,51 @@
+[package]
+name = "tn-types"
+version.workspace = true
+edition = "2021"
+license = "Apache-2.0"
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+    "Markus Osterlund <markus@telcoin.org>",
+    "Mysten Labs <build@mystenlabs.com>",
+]
+publish = false
+
+[dependencies]
+bcs = { workspace = true }
+bincode = { workspace = true }
+# direct reth currently for circular deps
+reth-primitives = { workspace = true }
+reth-chainspec = { workspace = true }
+reth-tasks = { workspace = true }
+derive_builder = { workspace = true }
+futures = { workspace = true }
+indexmap = { workspace = true }
+rand = { workspace = true }
+roaring = { workspace = true }
+serde = { workspace = true }
+serde_with = { workspace = true }
+serde_yaml = { workspace = true }
+serde_repr = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["sync", "rt", "macros", "signal"] }
+tracing = { workspace = true }
+eyre = { workspace = true }
+once_cell = { workspace = true }
+tn-utils = { workspace = true }
+parking_lot = { workspace = true }
+secp256k1 = { workspace = true }
+libp2p = { workspace = true, features = ["serde"] }
+bs58 = { workspace = true }
+blake3 = { workspace = true }
+blst = { workspace = true, features = ["serde"] }
+alloy = { workspace = true, features = ["genesis"] }
+hex = { workspace = true }
+
+# test-utils
+tracing-subscriber = { workspace = true, optional = true }
+clap = { workspace = true, optional = true }
+
+[features]
+default = []
+test-utils = ["tracing-subscriber", "clap"]

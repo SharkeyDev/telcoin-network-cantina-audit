@@ -1,0 +1,36 @@
+[package]
+name = "tn-engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+authors = [
+    "Grant Kee <grant@telcoin.org>",
+    "Steven Stanfield <steve@telcoin.org>",
+]
+
+[dependencies]
+futures = { workspace = true }
+futures-util = { workspace = true }
+thiserror = { workspace = true }
+tn-types = { workspace = true }
+tn-reth = { workspace = true }
+tokio = { workspace = true, features = ["sync", "time"] }
+tokio-stream = { workspace = true, features = ["sync"] }
+tracing = { workspace = true }
+
+[dev-dependencies]
+# unit tests
+eyre = { workspace = true }
+tn-test-utils = { workspace = true }
+tn-batch-builder = { workspace = true, features = ["test-utils"] }
+tn-engine = { workspace = true, features = ["test-utils"] }
+tempfile = { workspace = true }
+tn-reth = { workspace = true, features = ["test-utils"] }
+tn-primary = { workspace = true, features = ["test-utils"] }
+
+[features]
+default = []
+test-utils = []
