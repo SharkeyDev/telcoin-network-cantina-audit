@@ -1,6 +1,6 @@
 # Auditor Instructions
 
-This repository contains the telcoin-network Rust code and Solidity tn-contracts. Follow these guidelines when adding or modifying code, or creating audit reports.
+This repository contains the telcoin-network Rust code and Solidity tn-contracts. Follow these guidelines when creating audit reports. Avoid modifying repository code unless a task specifically calls for it.
 
 - **Findings Formatting**: When submitting a finding, include Severity (High, Medium, Low, Information), Likelihood score, Impact score, and a short Finding Title.
 - Use the following template for findings:
